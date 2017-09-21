@@ -1,0 +1,64 @@
+<h1 id="Minos"><a href="#Minos" class="headerlink" title="Minos"></a>Minos</h1><h3 id="A-simple-and-retro-styled-Hexo-theme-concentrated-more-on-your-ideas"><a href="#A-simple-and-retro-styled-Hexo-theme-concentrated-more-on-your-ideas" class="headerlink" title="A simple and retro styled Hexo theme, concentrated more on your ideas."></a>A simple and retro styled Hexo theme, concentrated more on your ideas.</h3><h4 id="gt-gt-Preview"><a href="#gt-gt-Preview" class="headerlink" title="&gt;&gt; Preview"></a>&gt;&gt; <a href="http://ppoffice.github.io/hexo-theme-minos/">Preview</a></h4><p><img src="http://ppoffice.github.io/hexo-theme-minos/gallery/Minos.jpg" alt="Minos - the Hexo theme"></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><pre><code class="bash">$ git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-minos.git themes/minos
+</code></pre>
+<p><strong>Minos requires Hexo 3.0 and above.</strong></p>
+<h3 id="Enable"><a href="#Enable" class="headerlink" title="Enable"></a>Enable</h3><p>Modify <code>theme</code> setting in <code>_config.yml</code> to <code>minos</code>.</p>
+<h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h3><pre><code class="bash"><span class="built_in">cd</span> themes/minos
+git pull
+</code></pre>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h3 id="Theme-configuration-example"><a href="#Theme-configuration-example" class="headerlink" title="Theme configuration example"></a>Theme configuration example</h3><pre><code># Header
+menu:
+  Home: /
+  Archives: archives
+  Categories: categories
+  Tags: tags
+  About: about
+  Rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+toc: false
+fancybox: true
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+
+# Share
+share_jia: false
+share_addthis: true
+</code></pre><ul>
+<li><strong>excerpt_link</strong> - Cooperate with &lt;!– more –> tag to show only part of the article in index pages.</li>
+<li><strong>toc</strong> - Whether to show the table of contents in articles.</li>
+<li><strong>fancybox</strong> - Enable <a href="http://fancyapps.com/fancybox/">Fancybox</a>.</li>
+<li><strong>google_analytics</strong> - Google Analytics ID.</li>
+<li><strong>favicon</strong> - Favicon path.</li>
+</ul>
+<p>Don’t forget to rename <code>_config.yml.example</code> to <code>_config.yml</code> to enable theme config!</p>
+<h2 id="Custom-Categories-amp-Tags-amp-About-Pages"><a href="#Custom-Categories-amp-Tags-amp-About-Pages" class="headerlink" title="Custom Categories &amp; Tags &amp; About Pages"></a>Custom Categories &amp; Tags &amp; About Pages</h2><p>To enable custom categories page, tags page and about page, just copy the <code>categories</code> folder, <code>tags</code> folder and <code>about</code> folder under your theme’s <code>_source</code> foler into your site’s <code>source</code> folder. Then edit theme’s _config.yml and add the following lines:</p>
+<pre><code># Header
+menu:
+  ...
+  Categories: categories # -&gt; add this line
+  Tags: tags # -&gt; and add this line
+  About: about # -&gt; and add this line
+  ...
+</code></pre><h2 id="Languages"><a href="#Languages" class="headerlink" title="Languages"></a>Languages</h2><p>English and Simplified Chinese are the default languages of the theme. You can add translations in the <code>languages</code> folder and change the default language in site’s <code>_config.yml</code>.</p>
+<pre><code class="yml"><span class="attr">language:</span> <span class="string">zh-CN</span>
+</code></pre>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><h3 id="Custom-Categories-amp-Tags-Pages"><a href="#Custom-Categories-amp-Tags-Pages" class="headerlink" title="Custom Categories &amp; Tags Pages"></a>Custom Categories &amp; Tags Pages</h3><p>Get your categories and tags listed in single pages to make your blog more methodic.</p>
+<h3 id="Responsive-Layout"><a href="#Responsive-Layout" class="headerlink" title="Responsive Layout"></a>Responsive Layout</h3><p>Minos knows on what screen size you are browsering the website, and reorganize the layout to fit your device.</p>
+<p><img src="http://ppoffice.github.io/hexo-theme-minos/gallery/Minos-mobile.jpg" alt=""></p>
+<h3 id="Fancybox"><a href="#Fancybox" class="headerlink" title="Fancybox"></a>Fancybox</h3><p>Minos uses <a href="http://fancyapps.com/fancybox/">Fancybox</a> to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.</p>
+<pre><code>![img caption](img url)
+</code></pre><h3 id="Monokai-Sublime-Syntax-Highlight"><a href="#Monokai-Sublime-Syntax-Highlight" class="headerlink" title="Monokai Sublime Syntax Highlight"></a>Monokai Sublime Syntax Highlight</h3><p>Thanks to <a href="https://highlightjs.org/">Highlight.js</a>.</p>
+<h2 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h2><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
+<li><a href="http://gruntjs.com/">Grunt</a> 0.4+</li>
+<li>Hexo 3.0+</li>
+</ul>
+<h3 id="Grunt-tasks"><a href="#Grunt-tasks" class="headerlink" title="Grunt tasks"></a>Grunt tasks</h3><ul>
+<li><strong>default</strong> - Download <a href="http://fancyapps.com/fancybox/">Fancybox</a> and <a href="http://fontawesome.io/">Font Awesome</a>.</li>
+<li><strong>fontawesome</strong> - Only download <a href="http://fontawesome.io/">Font Awesome</a>.</li>
+<li><strong>fancybox</strong> - Only download <a href="http://fancyapps.com/fancybox/">Fancybox</a>.</li>
+<li><strong>clean</strong> - Clean temporarily files and downloaded files.</li>
+</ul>
